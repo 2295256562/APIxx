@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Dec 06 09:34:27 CST 2019","Fri Dec 06 09:34:27 CST 2019","14","","test_login","","","","用户详情","
+    用户信息详情
+    "
+"passed","Fri Dec 06 09:34:27 CST 2019","Fri Dec 06 09:34:27 CST 2019","17","","test_login","","","","地址管理","地址列表"

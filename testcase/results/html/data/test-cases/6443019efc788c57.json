@@ -1,0 +1,73 @@
+{
+  "uid" : "6443019efc788c57",
+  "name" : "地址管理",
+  "fullName" : "test_login#test_address",
+  "historyId" : "36b61066f738c31906731f9e836b97a9",
+  "time" : {
+    "start" : 1575549773163,
+    "stop" : 1575549773210,
+    "duration" : 47
+  },
+  "description" : "地址列表",
+  "descriptionHtml" : "<p>地址列表</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "地址列表",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b76c3a9dd964884a",
+      "name" : "stderr",
+      "source" : "b76c3a9dd964884a.txt",
+      "type" : "text/plain",
+      "size" : 541
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "个人中心"
+  }, {
+    "name" : "story",
+    "value" : "地址管理"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "host",
+    "value" : "kuangxinmandeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "32076-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6443019efc788c57.json",
+  "parameterValues" : [ ]
+}

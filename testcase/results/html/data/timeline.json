@@ -1,0 +1,133 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "kuangxinmandeMacBook-Pro.local",
+    "children" : [ {
+      "name" : "32076-MainThread",
+      "children" : [ {
+        "name" : "地址管理",
+        "uid" : "6443019efc788c57",
+        "parentUid" : "f5d3bdec9174a48b5b1c4caf89efb479",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575549773163,
+          "stop" : 1575549773210,
+          "duration" : 47
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "用户详情",
+        "uid" : "bddeaae0ff273564",
+        "parentUid" : "f5d3bdec9174a48b5b1c4caf89efb479",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575549773145,
+          "stop" : 1575549773159,
+          "duration" : 14
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f5d3bdec9174a48b5b1c4caf89efb479"
+    }, {
+      "name" : "35476-MainThread",
+      "children" : [ {
+        "name" : "地址管理",
+        "uid" : "cf3a4adb7310919",
+        "parentUid" : "9ef3dbd29a93a942a83889830ca2aa82",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575596067562,
+          "stop" : 1575596067579,
+          "duration" : 17
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "用户详情",
+        "uid" : "e5d34d0d3540ee24",
+        "parentUid" : "9ef3dbd29a93a942a83889830ca2aa82",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575596067545,
+          "stop" : 1575596067559,
+          "duration" : 14
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9ef3dbd29a93a942a83889830ca2aa82"
+    }, {
+      "name" : "31205-MainThread",
+      "children" : [ {
+        "name" : "用户详情",
+        "uid" : "2dc156c7739e92f4",
+        "parentUid" : "08d21f957faec901bcda035b33456aa9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575548805311,
+          "stop" : 1575548805323,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "08d21f957faec901bcda035b33456aa9"
+    }, {
+      "name" : "30946-MainThread",
+      "children" : [ {
+        "name" : "用户详情",
+        "uid" : "afedb48ca8600199",
+        "parentUid" : "fb7d4c46a7803c74147573280650026d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575548355745,
+          "stop" : 1575548355759,
+          "duration" : 14
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fb7d4c46a7803c74147573280650026d"
+    }, {
+      "name" : "35097-MainThread",
+      "children" : [ {
+        "name" : "用户详情",
+        "uid" : "47e0601bf8e2b635",
+        "parentUid" : "454478a822d1132cb39fdf6d0373c003",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575595905590,
+          "stop" : 1575595905602,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "地址管理",
+        "uid" : "c5a378e6d855607",
+        "parentUid" : "454478a822d1132cb39fdf6d0373c003",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575595905606,
+          "stop" : 1575595905651,
+          "duration" : 45
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "454478a822d1132cb39fdf6d0373c003"
+    } ],
+    "uid" : "87972197c56dcd50cca2e58fcd0c32fe"
+  } ]
+}

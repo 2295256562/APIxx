@@ -1,0 +1,2 @@
+[I 191205 20:19:15 httpService:85] 请求地址http://api.dlab.com/app/user/introinfo:
+[D 191205 20:19:15 httpService:86] 请求地址{'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'Accept': '*/*', 'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjozMDMzNDcxLCJleHAiOjE1NzYxNTMxNTUsImlhdCI6MTU3NTU0ODM1NX0.rOtIHuQ5oVEAN29OA4j4FemXjcvAmtlbUNNj2SMQiZ0', 'api-version': 'v1.2.0', 'request-source': 'web', 'content-type': 'application/json'}:

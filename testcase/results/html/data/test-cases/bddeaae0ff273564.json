@@ -1,0 +1,94 @@
+{
+  "uid" : "bddeaae0ff273564",
+  "name" : "用户详情",
+  "fullName" : "test_login#test_userinfo",
+  "historyId" : "88b2a036ca34badbf77d6611184a636f",
+  "time" : {
+    "start" : 1575549773145,
+    "stop" : 1575549773159,
+    "duration" : 14
+  },
+  "description" : "\n    用户信息详情\n    :return:\n    ",
+  "descriptionHtml" : "<pre><code>用户信息详情\n:return:\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_token",
+    "time" : {
+      "start" : 1575549772958,
+      "stop" : 1575549773143,
+      "duration" : 185
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n    用户信息详情\n    :return:\n    ",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b665bf30a5d7a932",
+      "name" : "stdout",
+      "source" : "b665bf30a5d7a932.txt",
+      "type" : "text/plain",
+      "size" : 43
+    }, {
+      "uid" : "da9bc0f0aaf643e5",
+      "name" : "stderr",
+      "source" : "da9bc0f0aaf643e5.txt",
+      "type" : "text/plain",
+      "size" : 540
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "个人中心"
+  }, {
+    "name" : "story",
+    "value" : "用户信息"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "host",
+    "value" : "kuangxinmandeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "32076-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bddeaae0ff273564.json",
+  "parameterValues" : [ ]
+}

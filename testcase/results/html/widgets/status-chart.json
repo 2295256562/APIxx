@@ -1,0 +1,21 @@
+[ {
+  "uid" : "e5d34d0d3540ee24",
+  "name" : "用户详情",
+  "time" : {
+    "start" : 1575596067545,
+    "stop" : 1575596067559,
+    "duration" : 14
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cf3a4adb7310919",
+  "name" : "地址管理",
+  "time" : {
+    "start" : 1575596067562,
+    "stop" : 1575596067579,
+    "duration" : 17
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

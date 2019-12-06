@@ -1,0 +1,128 @@
+{
+  "uid" : "e5d34d0d3540ee24",
+  "name" : "用户详情",
+  "fullName" : "test_login#test_userinfo",
+  "historyId" : "88b2a036ca34badbf77d6611184a636f",
+  "time" : {
+    "start" : 1575596067545,
+    "stop" : 1575596067559,
+    "duration" : 14
+  },
+  "description" : "\n    用户信息详情\n    ",
+  "descriptionHtml" : "<pre><code>用户信息详情\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_token",
+    "time" : {
+      "start" : 1575596067438,
+      "stop" : 1575596067542,
+      "duration" : 104
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n    用户信息详情\n    ",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "452e0d8e72fd022d",
+      "name" : "stdout",
+      "source" : "452e0d8e72fd022d.txt",
+      "type" : "text/plain",
+      "size" : 56
+    }, {
+      "uid" : "381ed1d0a3ea56c2",
+      "name" : "stderr",
+      "source" : "381ed1d0a3ea56c2.txt",
+      "type" : "text/plain",
+      "size" : 540
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "个人中心"
+  }, {
+    "name" : "story",
+    "value" : "用户信息"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "host",
+    "value" : "kuangxinmandeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "35476-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "47e0601bf8e2b635",
+      "status" : "passed",
+      "time" : {
+        "start" : 1575595905590,
+        "stop" : 1575595905602,
+        "duration" : 12
+      }
+    }, {
+      "uid" : "bddeaae0ff273564",
+      "status" : "passed",
+      "time" : {
+        "start" : 1575549773145,
+        "stop" : 1575549773159,
+        "duration" : 14
+      }
+    }, {
+      "uid" : "2dc156c7739e92f4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1575548805311,
+        "stop" : 1575548805323,
+        "duration" : 12
+      }
+    }, {
+      "uid" : "afedb48ca8600199",
+      "status" : "passed",
+      "time" : {
+        "start" : 1575548355745,
+        "stop" : 1575548355759,
+        "duration" : 14
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e5d34d0d3540ee24.json",
+  "parameterValues" : [ ]
+}

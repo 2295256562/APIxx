@@ -1,0 +1,43 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "个人中心",
+    "children" : [ {
+      "name" : "用户信息",
+      "children" : [ {
+        "name" : "用户详情",
+        "uid" : "e5d34d0d3540ee24",
+        "parentUid" : "2f75b4665f54ed531ae74bb6d5d4204b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575596067545,
+          "stop" : 1575596067559,
+          "duration" : 14
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2f75b4665f54ed531ae74bb6d5d4204b"
+    }, {
+      "name" : "地址管理",
+      "children" : [ {
+        "name" : "地址管理",
+        "uid" : "cf3a4adb7310919",
+        "parentUid" : "a0114a399e60ce762e4cf7e4996cae12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1575596067562,
+          "stop" : 1575596067579,
+          "duration" : 17
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a0114a399e60ce762e4cf7e4996cae12"
+    } ],
+    "uid" : "1d7c480067ad6060dd9fe06167fad56b"
+  } ]
+}
