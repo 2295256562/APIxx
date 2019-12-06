@@ -9,7 +9,7 @@ from utils.write_yaml import write_yaml
 @pytest.fixture(scope="session")
 def get_token():
     # 1. 调登陆接口
-    headers = {
+    header = {
         "user-agent": config.USER_AGENT,
         'Accept': '*/*',
         "api-version": config.API_VERSION,
@@ -17,5 +17,6 @@ def get_token():
         "content-type": "application/x-www-form-urlencoded"
     }
 
-    res = requests.post(config.BASE_URL + 'app/user/login/v2?mobile={0}&password={1}'.format("17671105406", "123456"), headers=headers)
+    res = requests.post(config.BASE_URL + 'app/user/login/v2?mobile={0}&password={1}'.format(USERNAME, PASSWORD), headers=header)
+    # 2.把token写入yaml里
     write_yaml("token", res.json()["data"]["token"])

@@ -83,6 +83,7 @@ class HttpService:
             logger.debug("请求地址{0}:".format(headers))
 
         self.common_check(res)
+        logger.info("返回的数据结果:{}".format(res.json()))
         return res
 
     def requests_post(self):
@@ -93,6 +94,7 @@ class HttpService:
             res = requests.post(config.BASE_URL + self.url, json=self.data, headers=headers)
 
         self.common_check(res)
+        logger.info("返回的数据结果:{}".format(res.json()))
         return res
 
     @classmethod

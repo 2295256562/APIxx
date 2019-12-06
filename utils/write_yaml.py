@@ -21,7 +21,7 @@ def write_yaml(key, value):
 
 def read_yaml(local):
     path2 = os.getcwd()
-    ypath = os.path.join(path2, 'env/token.yaml')
+    ypath = os.path.join('/Users/kxm/qa2/自动化脚本/APIkuang', 'env/token.yaml')
     print(ypath)
     with open(ypath, 'r') as yaml_file:
         yaml_obj = yaml.load(yaml_file.read(), Loader=yaml.FullLoader)

@@ -10,7 +10,7 @@ def test_userinfo(get_token):
     """
     用户信息详情
     """
-    res = HttpService("GET", 'app/user/introinfo').run() \
+    res = HttpService("GET", '/app/user/introinfo').run() \
         .validate("json().data.mobile", '17671105406') \
         .validate("json().data.id", 3033471)
 
@@ -21,5 +21,5 @@ def test_userinfo(get_token):
 @allure.description("地址列表")
 def test_address():
 
-    res = HttpService("GET", 'app/ec/address/list').run()\
+    res = HttpService("GET", '/app/ec/address/list').run()\
         .validate("json().code", 0)
