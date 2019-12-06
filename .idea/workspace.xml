@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f79d77a-6715-4ab3-b442-8b0a7de5c758" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/env/token.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/env/token.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/results/html/data/attachments/4cf9c244ea363461.txt" beforeDir="false" />
@@ -49,7 +49,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UXiOjxLgI9xnO1Sw6wKMoalee5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -206,7 +206,7 @@
       <updated>1575509310971</updated>
       <workItem from="1575509312941" duration="17241000" />
       <workItem from="1575537732052" duration="8496000" />
-      <workItem from="1575595763605" duration="2826000" />
+      <workItem from="1575595763605" duration="3014000" />
     </task>
     <servers />
   </component>
