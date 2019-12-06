@@ -9,8 +9,8 @@ def write_yaml(key, value):
     :param value:
     :return:
     """
-    path2 = os.path.abspath('..')
-    ypath = os.path.join(path2, "env", "token.yaml")
+    path2 = os.getcwd()
+    ypath = os.path.join(path2, 'env/token.yaml')
     print(ypath)
     # 需写入的内容
     t = {key: value}
@@ -20,7 +20,7 @@ def write_yaml(key, value):
 
 
 def read_yaml(local):
-    path2 = os.path.abspath('..')
+    path2 = os.getcwd()
     ypath = os.path.join(path2, 'env/token.yaml')
     print(ypath)
     with open(ypath, 'r') as yaml_file:
