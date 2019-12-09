@@ -1,8 +1,10 @@
+import json
 import logging
 
+import jsonpath as jsonpath
 import requests
 from env import config
-from utils.write_yaml import write_yaml, read_yaml
+from utils.write_yaml import read_yaml
 from logzero import logger
 
 
@@ -45,20 +47,27 @@ class HttpService:
     def extract(self, field):
         """
         提取变量
-        :param field:
+        :param field: 提取表达式
         :return:
         """
-        value = self.response
-        for _key in field.split("."):
-            from requests import structures
-            if isinstance(value, requests.Response):
-                if _key == "json()":
-                    value = self.response.json()
-                else:
-                    value = getattr(value, _key)
-            elif isinstance(value, (structures.CaseInsensitiveDict, dict)):
-                value = value[_key]
-        return value
+        value = self.response.json()
+        # strvalue = json.dumps(value)
+        # tmp = json.loads(strvalue)
+        # print(value)
+        # for _key in field.split("."):
+            # print(_key)
+            # from requests import structures
+            # if isinstance(value, requests.Response):
+            #     if _key == "json()":
+            #         value = self.response.json()
+            #     else:
+            #         value = getattr(value, _key)
+            # elif isinstance(value, (structures.CaseInsensitiveDict, dict)):
+            #     value = value[_key]
+        # json_obj = json.loads(strvalue)
+
+        restul = jsonpath.jsonpath(value, field)
+        return restul
 
     def validate(self, key, expected_value):
         """
@@ -68,7 +77,8 @@ class HttpService:
         :return:
         """
         actual_value = self.extract(key)
-        assert actual_value == expected_value
+        assert actual_value[0] == expected_value
+        logger.info("实际数据:{} *********** 期望数据:{}".format(*actual_value, expected_value))
         return self
 
     def requests_get(self):
@@ -76,14 +86,16 @@ class HttpService:
         # print(headers)
         if self.params is not None:
             res = requests.get(config.BASE_URL + self.url, self.params, headers=headers)
-            logger.debug("请求地址{0} -- 请求参数{1} -- 请求headers{2}".format(config.BASE_URL + self.url, self.params, headers))
+            logger.info("请求地址:{0}".format(config.BASE_URL + self.url))
+            logger.info("请求参数:{}".format(self.params))
+            logger.debug("请求头:{0}:".format(headers))
         else:
             res = requests.get(config.BASE_URL + self.url, headers=headers)
-            logger.info("请求地址{0}:".format(config.BASE_URL + self.url))
-            logger.debug("请求地址{0}:".format(headers))
+            logger.info("请求地址:{0}".format(config.BASE_URL + self.url))
+            logger.debug("请求头:{0}:".format(headers))
 
         self.common_check(res)
-        logger.info("返回的数据结果:{}".format(res.json()))
+        logger.info(r"返回的数据结果:{}".format(res.json()))
         return res
 
     def requests_post(self):
@@ -94,7 +106,7 @@ class HttpService:
             res = requests.post(config.BASE_URL + self.url, json=self.data, headers=headers)
 
         self.common_check(res)
-        logger.info("返回的数据结果:{}".format(res.json()))
+        logger.info(r"返回的数据结果:{}".format(res.json()))
         return res
 
     @classmethod
@@ -105,8 +117,7 @@ class HttpService:
         :return:
         """
         assert resp.status_code == 200, cls.error_request_datail(resp, '响应码非200')
-        assert resp.json()['msg'] == 'success', cls.error_request_datail(resp, '响应内容中 msg 不为success')
-
+        # assert resp.json()['msg'] == 'success', cls.error_request_datail(resp, '响应内容中 msg 不为success')
 
     @classmethod
     def error_request_datail(cls, resp, error_msg=''):
@@ -118,7 +129,6 @@ class HttpService:
         """
         content = '{}\n{}'.format(cls._get_request_info(resp), error_msg)
         return content
-
 
     @staticmethod
     def _get_request_info(resp):
