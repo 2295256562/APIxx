@@ -10,7 +10,7 @@ def write_yaml(key, value):
     :return:
     """
     path2 = os.getcwd()
-    ypath = os.path.join(path2, 'env/token.yaml')
+    ypath = os.path.join('/Users/kxm/qa2/自动化脚本/APIkuang', 'env/token.yaml')
     print(ypath)
     # 需写入的内容
     t = {key: value}

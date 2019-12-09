@@ -10,11 +10,12 @@ from logzero import logger
 
 class HttpService:
 
-    def __init__(self, method, url, params=None, data=None):
+    def __init__(self, method, url, params=None, data=None, json=None):
         self.method = method
         self.url = url
         self.params = params
         self.data = data
+        self.json = json
         self.headers = {
             "user-agent": config.USER_AGENT,
             'Accept': '*/*',
@@ -100,11 +101,10 @@ class HttpService:
 
     def requests_post(self):
         headers = self._headers()
-        if isinstance(self.data, dict):
-            res = requests.post(config.BASE_URL + self.url, self.data, headers=headers)
-        else:
-            res = requests.post(config.BASE_URL + self.url, json=self.data, headers=headers)
-
+        res = requests.post(config.BASE_URL + self.url, json=self.data, headers=headers)
+        logger.info("请求地址:{0}".format(config.BASE_URL + self.url))
+        logger.info("请求body:{0}".format(self.data))
+        logger.debug("请求头:{0}:".format(headers))
         self.common_check(res)
         logger.info(r"返回的数据结果:{}".format(res.json()))
         return res
