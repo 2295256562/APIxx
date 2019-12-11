@@ -1,7 +1,7 @@
 import allure
 import pytest
 
-from env.url import baseinfo, GOODS_SKU_INFO, GOODS_IMGTEXT, GOODS_SPEC, GOOD_COLLECTION
+from env.url import baseinfo, GOODS_SKU_INFO, GOODS_IMGTEXT, GOODS_SPEC, GOOD_COLLECTION, CAR_COUNT, ADD_SHOPCART
 from requester.httpService import HttpService
 
 
@@ -81,7 +81,8 @@ def test_goodsSkuErr(parameterTypes):
 @allure.title("图文详情信息")
 @allure.description("正确的图文信息")
 def test_goodsImg():
-    HttpService("GET", GOODS_IMGTEXT, params={'id': 2}).run().validate('$.data.sid', 2)
+    HttpService("GET", GOODS_IMGTEXT, params={'id': 2}).run()\
+        .validate('$.data.sid', 2)
 
 
 @allure.feature("商品模块")
@@ -90,7 +91,8 @@ def test_goodsImg():
 @allure.description("正确的图文信息")
 @pytest.mark.parametrize("parameterTypes", ['null', ' '])
 def test_goodsImgErr(parameterTypes):
-    HttpService("GET", GOODS_IMGTEXT, params={'id': parameterTypes}).run().validate('$.code', 306)
+    HttpService("GET", GOODS_IMGTEXT, params={'id': parameterTypes}).run()\
+        .validate('$.code', 306)
 
 
 @allure.feature("商品模块")
@@ -107,7 +109,8 @@ def test_goodsSpec():
 @allure.description("错误的规格信息入参")
 @pytest.mark.parametrize("parmsType", ['null', '', ' or 1'])
 def test_goodsSpecErr(parmsType):
-    HttpService("GET", GOODS_SPEC, params={'id': parmsType}).run().validate('$.code', 306)
+    HttpService("GET", GOODS_SPEC, params={'id': parmsType}).run()\
+        .validate('$.code', 306)
 
 
 @allure.feature("商品模块")
@@ -115,7 +118,8 @@ def test_goodsSpecErr(parmsType):
 @allure.title("正确的商品id,收藏")
 def test_goodsCollection():
     req_data = {"is_del": 0, "sid": 2, "reason": ""}
-    HttpService("POST", GOOD_COLLECTION, data=req_data).run().validate('$.code', 0)
+    HttpService("POST", GOOD_COLLECTION, data=req_data).run()\
+        .validate('$.code', 0)
 
 
 @allure.feature("商品模块")
@@ -124,3 +128,54 @@ def test_goodsCollection():
 def test_goodsCollectionEsc():
     req_data = {"is_del": 1, "sid": 2}
     HttpService("POST", GOOD_COLLECTION, data=req_data).run()
+
+
+@allure.feature("商品模块")
+@allure.story("加入购物车")
+@allure.title("商品加入购物车")
+def test_addshopCart():
+    data = {"sid": 2, "amount": 1, "sku_id": 10}
+    HttpService("POST", ADD_SHOPCART, data=data).run()\
+        .validate('$.code', 0)
+
+
+@allure.feature("商品模块")
+@allure.story("加入购物车")
+@allure.title("错误的商品id加入购物车")
+def test_addshopCartErrsid():
+    data = {"sid": 999999, "amount": 1, "sku_id": 10}
+    HttpService("POST", ADD_SHOPCART, data=data).run()\
+        .validate('$.msg', "查询数据错误")
+
+
+@allure.feature("商品模块")
+@allure.story("加入购物车")
+@allure.title("错误的商品id加入购物车")
+@pytest.mark.parametrize("errType", ['null', '', "2", float(2)])
+def test_addshopCartErrsidT(errType):
+    data = {"sid": errType, "amount": 1, "sku_id": 10}
+    HttpService("POST", ADD_SHOPCART, data=data).run().validate("$.msg", "参数错误")
+
+
+@allure.feature("商品模块")
+@allure.story("加入购物车")
+@allure.title("错误的商品id加入购物车")
+def test_addshopCartErrAmountN():
+    data = {"sid": 2, "amount": 999, "sku_id": 10}
+    HttpService("POST", ADD_SHOPCART, data=data).run().validate("$.msg", "商品数量不能大于99")
+
+
+@allure.feature("商品模块")
+@allure.story("加入购物车")
+@allure.title("错误的商品id加入购物车")
+@pytest.mark.parametrize("errType", ['null', '', "2", float(2)])
+def test_addshopCartErrAmountN(errType):
+    data = {"sid": 2, "amount": errType, "sku_id": 10}
+    HttpService("POST", ADD_SHOPCART, data=data).run().validate("$.msg", "参数错误")
+
+
+@allure.feature("商品模块")
+@allure.story("购物车")
+@allure.title("购物车中的商品数量")
+def test_carcount():
+    HttpService("GET", CAR_COUNT).run()
